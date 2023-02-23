@@ -30,6 +30,7 @@ class HomeView extends GetView<HomeController> {
                 ),
                 TextFormField(
                   controller: controller.tKode,
+                  keyboardType: TextInputType.number,
                   decoration: InputDecoration(
                     focusColor: Colors.white,
                     hintText: "Masukan Kode SPBU",
@@ -69,6 +70,7 @@ class HomeView extends GetView<HomeController> {
                   height: 20,
                 ),
                 TextFormField(
+                  keyboardType: TextInputType.number,
                   controller: controller.tShift,
                   decoration: InputDecoration(
                     focusColor: Colors.white,
@@ -83,6 +85,7 @@ class HomeView extends GetView<HomeController> {
                 ),
                 TextFormField(
                   controller: controller.tTrans,
+                  keyboardType: TextInputType.number,
                   decoration: InputDecoration(
                     focusColor: Colors.white,
                     hintText: "Masukan No. Trans",
@@ -95,7 +98,7 @@ class HomeView extends GetView<HomeController> {
                   height: 20,
                 ),
                 TextFormField(
-                  controller: controller.tSPBU,
+                  controller: controller.tWaktu,
                   decoration: InputDecoration(
                     focusColor: Colors.white,
                     hintText: "Masukan Waktu",
@@ -108,7 +111,8 @@ class HomeView extends GetView<HomeController> {
                   height: 20,
                 ),
                 TextFormField(
-                  controller: controller.tSPBU,
+                  controller: controller.tPompa,
+                  keyboardType: TextInputType.number,
                   decoration: InputDecoration(
                     focusColor: Colors.white,
                     hintText: "Masukan Pulau/Pompa",
@@ -153,6 +157,7 @@ class HomeView extends GetView<HomeController> {
                 ),
                 TextFormField(
                   controller: controller.tHarga,
+                  keyboardType: TextInputType.number,
                   decoration: InputDecoration(
                     focusColor: Colors.white,
                     hintText: "Masukan Harga/Liter",
@@ -166,6 +171,7 @@ class HomeView extends GetView<HomeController> {
                 ),
                 TextFormField(
                   controller: controller.tVolume,
+                  keyboardType: TextInputType.number,
                   decoration: InputDecoration(
                     focusColor: Colors.white,
                     hintText: "Masukan Volume",
@@ -192,6 +198,7 @@ class HomeView extends GetView<HomeController> {
                 ),
                 TextFormField(
                   controller: controller.tCash,
+                  keyboardType: TextInputType.number,
                   decoration: InputDecoration(
                     focusColor: Colors.white,
                     hintText: "Masukan Cash",
@@ -204,7 +211,7 @@ class HomeView extends GetView<HomeController> {
                   height: 20,
                 ),
                 TextFormField(
-                  controller: controller.tSPBU,
+                  controller: controller.tPlat,
                   decoration: InputDecoration(
                     focusColor: Colors.white,
                     hintText: "Masukan No. Plat",
@@ -253,7 +260,16 @@ class HomeView extends GetView<HomeController> {
                 //   ),
                 // ),
 
-                // ElevatedButton(),
+                Center(
+                  child: Container(
+                      width: 200,
+                      child: ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: Colors.teal[400],
+                          ),
+                          child: Text('Generate PDF'),
+                          onPressed: (() => controller.getPdf()))),
+                ),
                 SizedBox(
                   height: 20,
                 ),
